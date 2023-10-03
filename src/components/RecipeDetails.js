@@ -32,29 +32,30 @@ const RecipeDetails = () => {
   }
 
   return (
+    <div className="d-flex justify-content-center align-items-center" >
       
-    <Card style={{ width: '60%' }}>
-      <Card.Img variant="top" src={recipe.strMealThumb} alt={recipe.strMeal} />
-      <Card.Body>
-        <Card.Title>{recipe.strMeal}</Card.Title>
-        <Card.Text>
-          <h5>Ingredientes:</h5>
-          <ul>
-            {getIngredients(recipe).map((ingredient, index) => (
-              <li key={index}>{ingredient}</li>
-            ))}
-          </ul>
-        </Card.Text>
-        <Card.Text>
-          <h5>Instruções:</h5>
-          <p>{recipe.strInstructions}</p>
-        </Card.Text>
-      </Card.Body>
-    </Card>
-
-
+      <Card style={{ width: '60%' }}>
+      <div className="text-center">
+        <h2>{recipe.strMeal}</h2>
+      </div>
+        <Card.Img variant="top" src={recipe.strMealThumb} alt={recipe.strMeal} />
+        <Card.Body>
+          <Card.Text>
+            <h5>Ingredientes:</h5>
+            <ul>
+              {getIngredients(recipe).map((ingredient, index) => (
+                <li key={index}>{ingredient}</li>
+              ))}
+            </ul>
+          </Card.Text>
+          <Card.Text>
+            <h5>Instruções:</h5>
+            <p>{recipe.strInstructions}</p>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
   );
-
 };
 
 const getIngredients = (recipe) => {

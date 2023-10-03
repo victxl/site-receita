@@ -23,7 +23,7 @@ function BuscarPorIngredientes() {
       const { meals } = response.data;
       setRecipes(meals || []);
       setSearched(true);
-      setShowIngredientList(false); // Esconde a lista após a busca
+      setShowIngredientList(false); 
     } catch (error) {
       console.error("Erro ao buscar receitas por ingrediente:", error);
     }
@@ -34,7 +34,7 @@ function BuscarPorIngredientes() {
     handleSearch();
   };
 
-  // Use useEffect para buscar a lista de ingredientes disponíveis
+ 
   useEffect(() => {
     const fetchIngredientList = async () => {
       try {

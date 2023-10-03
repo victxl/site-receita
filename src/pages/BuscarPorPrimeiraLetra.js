@@ -42,7 +42,7 @@ function BuscarPorPrimeiraLetra() {
     <div className="container">
       <h2>Buscar Receitas Letra</h2>
       <div>
-        <ul className="nav flex-wrap"> {/* Use flex-wrap para que o alfabeto fique em uma única linha */}
+        <ul className="nav flex-wrap"> 
           {alphabet.map((letter) => (
             <li className="nav-item" key={letter}>
               <button
