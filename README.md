@@ -13,7 +13,7 @@ Este é um projeto de exemplo para uma aplicação web de busca de receitas dese
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/victxl/site-receita.git
    ```
 
 2. Acesse o diretório do projeto:
