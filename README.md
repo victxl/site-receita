@@ -19,7 +19,7 @@ Instalação
 2. Acesse o diretório do projeto:
 
    ```bash
-   cd nome-do-repositorio
+   cd site-receita
    ```
 
 3. Instale as dependências:
