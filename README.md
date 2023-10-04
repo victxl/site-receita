@@ -1,5 +1,5 @@
 
-```markdown
+
 Receitas - Aplicação de Busca de Receitas
 
 Este é um projeto de exemplo para uma aplicação web de busca de receitas desenvolvida com React. Os usuários podem pesquisar receitas por ingredientes, visualizar os detalhes das receitas e muito mais.
