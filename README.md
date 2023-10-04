@@ -55,9 +55,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull re
 
 Este projeto é licenciado sob a [Licença MIT](LICENSE).
 
----
-
-Este README é apenas um exemplo. Personalize-o de acordo com as necessidades do seu projeto, adicionando mais informações sobre o funcionamento do aplicativo, configuração do ambiente de desenvolvimento, entre outros detalhes relevantes.
-```
-
-Lembre-se de personalizar o README com informações específicas sobre o seu projeto, como recursos adicionais, instruções de configuração do ambiente, guias de uso e qualquer outra informação relevante.
