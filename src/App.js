@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 
 
 
+
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/buscar-por-ingredientes" element={<BuscarPorIngredientes />} />
           <Route path="/recipe/:id" element={<RecipeDetails />} />
         </Routes>
+        <HomePage />
         <Footer />
       </div>
     </Router>
