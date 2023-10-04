@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <p>&copy; {new Date().getFullYear()} Victor Henrique</p>
         <p>
-          Visite meu perfil no GitHub:{" "}
+          Visite o perfil no GitHub:{" "}
           <a
             href="https://github.com/victxl"
             target="_blank"

@@ -1,25 +1,25 @@
 
-```markdown
-# Receitas - Aplicação de Busca de Receitas
+
+Receitas - Aplicação de Busca de Receitas
 
 Este é um projeto de exemplo para uma aplicação web de busca de receitas desenvolvida com React. Os usuários podem pesquisar receitas por ingredientes, visualizar os detalhes das receitas e muito mais.
 
-## Pré-requisitos
+ Pré-requisitos
 
 - [Node.js](https://nodejs.org/) instalado na sua máquina.
 
-## Instalação
+Instalação
 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/victxl/site-receita.git
    ```
 
 2. Acesse o diretório do projeto:
 
    ```bash
-   cd nome-do-repositorio
+   cd site-receita
    ```
 
 3. Instale as dependências:
@@ -55,9 +55,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull re
 
 Este projeto é licenciado sob a [Licença MIT](LICENSE).
 
----
-
-Este README é apenas um exemplo. Personalize-o de acordo com as necessidades do seu projeto, adicionando mais informações sobre o funcionamento do aplicativo, configuração do ambiente de desenvolvimento, entre outros detalhes relevantes.
-```
-
-Lembre-se de personalizar o README com informações específicas sobre o seu projeto, como recursos adicionais, instruções de configuração do ambiente, guias de uso e qualquer outra informação relevante.
