@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function HomemPage() {
   return (
-    <Navbar bg="dark" data-bs-theme="dark" className='sticky-top'>
+    <Navbar bg="dark" expand="lg" data-bs-theme="dark" className='sticky-top'>
       <Container>
         <Navbar.Brand href="/">Receitas</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
