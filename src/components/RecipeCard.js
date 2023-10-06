@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap/Button";
 
-const RecipeCard = ({ recipe }) => {
+const Cards = ({ recipe }) => {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top"
@@ -24,4 +24,4 @@ const RecipeCard = ({ recipe }) => {
   );
 };
 
-export default RecipeCard;
+export default Cards;

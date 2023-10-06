@@ -3,69 +3,69 @@ import axios from "axios";
 import RecipeCard from "../components/RecipeCard";
 
 function BuscarPorPrimeiraLetra() {
-  const [firstLetter, setFirstLetter] = useState("");
-  const [recipes, setRecipes] = useState([]);
-  const [notFound, setNotFound] = useState(false);
+  const [primeiraLetra, setPrimeiraLetra] = useState("");
+  const [receitas, setReceitas] = useState([]);
+  const [naoEncontrado, setNaoEncontrado] = useState(false);
 
   useEffect(() => {
-    const fetchRecipesByFirstLetter = async () => {
+    const buscarReceitasPorPrimeiraLetra = async () => {
       try {
-        const response = await axios.get(
-          `https://www.themealdb.com/api/json/v1/1/search.php?f=${firstLetter}`
+        const resposta = await axios.get(
+          `https://www.themealdb.com/api/json/v1/1/search.php?f=${primeiraLetra}`
         );
-        const { meals } = response.data;
+        const { meals } = resposta.data;
 
         if (meals) {
-          setRecipes(meals);
-          setNotFound(false);
+          setReceitas(meals);
+          setNaoEncontrado(false);
         } else {
-          setRecipes([]);
-          setNotFound(true);
+          setReceitas([]);
+          setNaoEncontrado(true);
         }
-      } catch (error) {
-        console.error("Erro ao buscar receitas:", error);
+      } catch (erro) {
+        console.error("Erro ao buscar receitas:", erro);
       }
     };
 
-    if (firstLetter) {
-      fetchRecipesByFirstLetter();
+    if (primeiraLetra) {
+      buscarReceitasPorPrimeiraLetra();
     }
-  }, [firstLetter]);
+  }, [primeiraLetra]);
 
-  const handleSearch = (letter) => {
-    setFirstLetter(letter);
+  const realizarBusca = (letra) => {
+    setPrimeiraLetra(letra);
   };
 
-  const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  const alfabeto = "abcdefghijklmnopqrstuvwxyz".split("");
 
   return (
     <div className="container">
-      <h2>Buscar Receitas Letra</h2>
+      <h2>Buscar Receitas por Primeira Letra</h2>
       <div>
         <ul className="nav flex-wrap"> 
-          {alphabet.map((letter) => (
-            <li className="nav-item" key={letter}>
+          {alfabeto.map((letra) => (
+            <li className="nav-item" key={letra}>
               <button
-                className={`nav-link btn ${firstLetter === letter ? "btn-primary" : "btn-light"}`}
-                onClick={() => handleSearch(letter)}
+                className={`nav-link btn ${primeiraLetra === letra ? "btn-primary" : "btn-light"}`}
+                onClick={() => realizarBusca(letra)}
               >
-                {letter.toUpperCase()}
+                {letra.toUpperCase()}
               </button>
             </li>
           ))}
         </ul>
       </div>
-      {notFound ? (
+      {naoEncontrado ? (
         <h3>Receita não encontrada</h3>
       ) : (
         <>
-          {recipes.length > 0 && (
+          {receitas.length > 0 && (
             <div>
               <h3>Resultados da busca:</h3>
               <div className="row">
-                {recipes.map((recipe) => (
-                  <div className="col-md-4" key={recipe.idMeal}>
-                    <RecipeCard recipe={recipe} />
+                {receitas.map((receita) => (
+                  <div className="col-md-4" key={receita.idMeal}>
+                    <RecipeCard receita={receita} />
                   </div>
                 ))}
               </div>

@@ -1,48 +1,47 @@
 import React, { useState } from "react";
 import axios from "axios";
 import RecipeCard from "../components/RecipeCard";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Botao from 'react-bootstrap/Button';
+import Formulario from 'react-bootstrap/Form';
+import RotuloFlutuante from 'react-bootstrap/FloatingLabel';
 
 function BuscarPorNome() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [recipes, setRecipes] = useState([]);
-  const [searched, setSearched] = useState(false);
+  const [termoDeBusca, setTermoDeBusca] = useState("");
+  const [receitas, setReceitas] = useState([]);
+  const [buscou, setBuscou] = useState(false);
 
-  const handleSearch = async () => {
+  const realizarBusca = async () => {
     try {
-      const response = await axios.get(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`
+      const resposta = await axios.get(
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${termoDeBusca}`
       );
-      const { meals } = response.data;
-      setRecipes(meals || []);
-      setSearched(true);
-    } catch (error) {
-      console.error("Erro ao buscar receitas:", error);
+      const { meals } = resposta.data;
+      setReceitas(meals || []);
+      setBuscou(true);
+    } catch (erro) {
+      console.error("Erro ao buscar receitas:", erro);
     }
   };
 
   return (
     <div className="container">
       <div>
-        <FloatingLabel
+        <RotuloFlutuante
           controlId="floatingInput"
           label="Busca por Nome"
           className="mb-3"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}>
-          <Form.Control type="text" />
-        </FloatingLabel>
+          value={termoDeBusca}
+          onChange={(e) => setTermoDeBusca(e.target.value)}>
+          <Formulario.Control type="text" />
+        </RotuloFlutuante>
 
-
-        <Button variant="warning" onClick={handleSearch}>Pesquisar</Button>
+        <Botao variant="warning" onClick={realizarBusca}>Pesquisar</Botao>
       </div>
-      {searched && (
+      {buscou && (
         <div className="row">
-          {recipes.map((recipe) => (
-            <div className="col-md-4 md-2" key={recipe.idMeal}>
-              <RecipeCard recipe={recipe} />
+          {receitas.map((receita) => (
+            <div className="col-md-4 md-2" key={receita.idMeal}>
+              <RecipeCard receita={receita} />
             </div>
           ))}
         </div>
